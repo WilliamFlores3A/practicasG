@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    env_file:
+      - ./env/mongo.env
+
+  backend:
+    build: ./backend
+    ports:
+      - 3000:3000
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./frontend
+    ports:
+      - 8080:8080
+    env_file:
+      - ./env/frontend.env
+    depends_on:
+      - backend

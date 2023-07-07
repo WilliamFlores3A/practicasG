@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Giancarlos Cassagne",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "@tinyhttp/app": "^2.0.29",
+    "@tinyhttp/cors": "^2.0.0",
+    "milliparsec": "^2.2.2",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "standard": "17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App para reservación de áreas deportivas</title>
+  </head>
+  <body>
+    <div id="app" class="p-5 m-auto" style="max-width: 900px;">
+      <h1 class="text-center mb-3 text-primary">Canchas reservadas </h1>
+      <hr/>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody id="canchas"></tbody>
+      </table>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-cancha-modal">
+          Agregar cancha
+        </button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="add-cancha-modal" tabindex="-1" aria-labelledby="modal-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal-label">Agregar nueva cancha</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="form">
+              <div class="mb-3">
+                <label for="description" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="description" aria-describedby="description-help" required autocomplete="off">
+                <div id="description-help" class="form-text">Agrega una descripción de la cancha</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

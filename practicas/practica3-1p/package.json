@@ -1,0 +1,36 @@
+{
+  "name": "isp-practice-3-api",
+  "version": "1.0.0",
+  "description": "Api for a practice in ISP",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": [],
+  "author": "Geancarlos Cassagne",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "mongodb": "4.1",
+    "mongoose": "7.1.0"
+  },
+  "devDependencies": {
+    "jest": "29.5.0",
+    "mongodb-memory-server": "^8.12.2",
+    "standard": "17.0.0",
+    "supertest": "6.3.3"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json",
+    "env": {
+      "jest": true
+    }
+  },
+  "eslintIgnore": [
+    "node_modules"
+  ]
+}
